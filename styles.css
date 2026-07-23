@@ -1,0 +1,258 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #2b2d30;
+  --color-text-light: #5a5d63;
+  --color-accent: #3d5a80;
+  --color-accent-light: #e8edf3;
+  --color-border: #d4d8de;
+  --color-link-hover: #2c4260;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --max-width-page: 720px;
+  --max-width-site: 960px;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.site-header a:hover {
+  color: var(--color-accent);
+}
+
+.site-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ---------- MAIN (home) ---------- */
+
+.home-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: var(--max-width-site);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.home-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+  margin-bottom: 0.25rem;
+}
+
+.home-tagline {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  margin-bottom: 0.15rem;
+}
+
+.home-tagline-sub {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-text-light);
+  margin-bottom: 2.5rem;
+}
+
+.home-body {
+  max-width: 540px;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-text-light);
+  margin-bottom: 2.5rem;
+}
+
+.home-phone {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.home-phone a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.home-phone a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- MAIN (legal pages) ---------- */
+
+.legal-main {
+  flex: 1;
+  max-width: var(--max-width-page);
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  width: 100%;
+}
+
+.legal-main h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  margin-bottom: 0.25rem;
+}
+
+.legal-main .effective-date {
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+  margin-bottom: 2.5rem;
+}
+
+.legal-main h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.legal-main p {
+  margin-bottom: 1rem;
+}
+
+.legal-main ul,
+.legal-main ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.legal-main li {
+  margin-bottom: 0.35rem;
+}
+
+.legal-main .contact-block {
+  margin-top: 2rem;
+  padding: 1rem 1.25rem;
+  background: var(--color-accent-light);
+  border-radius: 4px;
+}
+
+.legal-main .contact-block p {
+  margin-bottom: 0.25rem;
+}
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  font-size: 0.875rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 600px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-tagline {
+    font-size: 1rem;
+  }
+
+  .home-phone {
+    font-size: 1.25rem;
+  }
+
+  .home-main {
+    padding: 3rem 1.25rem;
+  }
+
+  .legal-main {
+    padding: 2rem 1.25rem;
+  }
+
+  .legal-main h1 {
+    font-size: 1.35rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  a {
+    transition: none;
+  }
+}

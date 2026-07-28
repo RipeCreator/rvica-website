@@ -98,6 +98,13 @@ a:focus-visible {
   margin-bottom: 0.25rem;
 }
 
+.home-logo {
+  display: block;
+  width: min(340px, 75vw);
+  height: auto;
+  margin: 0 auto;
+}
+
 .home-tagline {
   font-size: 1.15rem;
   font-weight: 600;
